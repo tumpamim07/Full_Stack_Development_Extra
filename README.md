@@ -130,4 +130,222 @@
     ### Summary
     
     This setup covers a basic portfolio and contact page using HTML, showcasing how to use various HTML tags to structure and present content effectively.
+
+</details>
+<details>
+<summary>Assignment 02(HTML Tags)</summary>
+    
+- HTML Tags
+    
+    This HTML code demonstrates the use of various HTML elements, such as tables, forms, multimedia content (video), iframes, and accessible forms:
+    
+    ### 1. `<head>` Tag
+    
+    - The head section contains metadata, links to stylesheets, scripts, and the title of the document, but nothing visible to users.
+    
+    ```html
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Tumpa">
+        <title>HTML Tags</title>
+    </head>
+    
+    ```
+    
+    - **`<meta charset="UTF-8">`**: Defines the character encoding (UTF-8) used by the page.
+    - **`<meta name="viewport" content="width=device-width, initial-scale=1.0">`**: Ensures the website is responsive and fits the screen size on different devices.
+    - **`<meta name="author" content="Tumpa">`**: Specifies the author of the page.
+    - **`<title>`**: Sets the title of the webpage, which appears in the browser tab.
+    
+    ### 2. `<body>` Tag
+    
+    - The body contains the visible content of the HTML document, such as text, images, tables, forms, etc.
+    
+    ```html
+    <body>
+    
+    ```
+    
+    ### 3. `<header>` Tag
+    
+    - Defines a header section that typically contains introductory content or navigational links. In your example, it contains a heading and a paragraph.
+    
+    ```html
+    <header>
+        <h1>Welcome Everyone</h1>
+        <p>This page showcases the usage of various HTML elements</p>
+    </header>
+    
+    ```
+    
+    - **`<h1>`**: Represents the main heading (Heading 1).
+    - **`<p>`**: Defines a paragraph of text.
+    
+    ### 4. `<section>` Tag
+    
+    - A section element is used to define a thematic grouping of content. It often contains headings and related content.
+    
+    ```html
+    <section>
+        <h1>Tables</h1>
+        <table border="1">
+            <caption>Education Experience</caption>
+            <thead>
+                <tr>
+                    <th>Degree</th>
+                    <th>Institution</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>BSc in CSE</td>
+                    <td>ABC University</td>
+                    <td>2024</td>
+                </tr>
+                <tr>
+                    <td>HSC</td>
+                    <td>XYZ</td>
+                    <td>2019</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+    ```
+    
+    ### 5. `<table>` Tag
+    
+    - Defines a table for organizing data in rows and columns.
+    
+    ```html
+    <table border="1">
+    
+    ```
+    
+    - **`border="1"`**: Adds a border around the table cells.
+    
+    ### 6. `<caption>` Tag
+    
+    - Provides a caption for the table.
+    
+    ```html
+    <caption>Education Experience</caption>
+    
+    ```
+    
+    ### 7. `<thead>`, `<tbody>`, `<tr>`, `<th>`, and `<td>` Tags
+    
+    - **`<thead>`**: Defines the header section of the table.
+    - **`<tbody>`**: Contains the main body of the table data.
+    - **`<tr>`**: Represents a row within a table.
+    - **`<th>`**: Defines a header cell (usually bold and centered).
+    - **`<td>`**: Defines a standard table cell containing data.
+    
+    ```html
+    <thead>
+        <tr>
+            <th>Degree</th>
+            <th>Institution</th>
+            <th>Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>BSc in CSE</td>
+            <td>ABC University</td>
+            <td>2024</td>
+        </tr>
+        <tr>
+            <td>HSC</td>
+            <td>XYZ</td>
+            <td>2019</td>
+        </tr>
+    </tbody>
+    
+    ```
+    
+    ### 8. `<form>` Tag
+    
+    - Defines a form that allows users to input data and submit it to a server. In your example, it includes inputs for name, email, date of birth, gender, and a message.
+    
+    ```html
+    <form action="">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name"><br><br>
+    </form>
+    
+    ```
+    
+    - **`<label>`**: Labels the form element, improving accessibility.
+    - **`<input type="text">`**: Creates a single-line text input field.
+    - **`<textarea>`**: Creates a multi-line text input field.
+    - **`<button type="submit">`**: Creates a button to submit the form.
+    
+    ### 9. `<select>` and `<option>` Tags
+    
+    - Creates a dropdown selection box, and each `<option>` element represents an item in the dropdown list.
+    
+    ```html
+    <label for="gender">Gender:</label>
+    <select name="gender" id="gender">
+        <option value="">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+    
+    ```
+    
+    ### 10. `<video>` Tag
+    
+    - Embeds a video on the page. In your case, it has a height of 100px and controls for playing, pausing, etc.
+    
+    ```html
+    <video src="flower.mp4" height="100px" controls="autoplay" >My Video</video>
+    
+    ```
+    
+    - **`controls`**: Adds playback controls like play/pause.
+    - **`autoplay`**: Automatically plays the video when the page loads.
+    
+    ### 11. `<iframe>` Tag
+    
+    - Embeds another webpage within the current page.
+    
+    ```html
+    <iframe src="<https://www.wikipedia.org/>" width="100px" height="100px"></iframe>
+    
+    ```
+    
+    - **`src`**: Specifies the URL of the page to embed.
+    - **`width`** and **`height`**: Set the dimensions of the iframe.
+    
+    ### 12. Accessible Forms with `aria-label`
+    
+    - The `aria-label` attribute provides an accessible name for elements, especially for screen readers, making forms more accessible for users with disabilities.
+    
+    ```html
+    <form action="">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" aria-label="Username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" aria-label="Password"><br><br>
+        <button type="submit">Login</button>
+    </form>
+    
+    ```
+    
+    ### 13. `<footer>` Tag
+    
+    - Defines the footer of the page, typically used for copyright notices, contact information, etc.
+    
+    ```html
+    <footer>
+        <p>&copy; By Tumpa Moni Mim</p>
+    </footer>
+    
+    ```
+    
+    This is a complete breakdown of the tags used in your HTML code, explaining their purpose and usage in simple terms.
 </details>
