@@ -349,3 +349,118 @@
     
     This is a complete breakdown of the tags used in your HTML code, explaining their purpose and usage in simple terms.
 </details>
+
+<details>
+<summary>Assignment 03(CSS)</summary>
+
+    
+## Assignment about CSS, Syntax of CSS, External, Internal & Inline CSS, Selectors, Box model in CSS
+    
+### **HTML Code Breakdown:**
+    
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css"> <!-- External CSS link -->
+</head>
+    
+<!-- Internal CSS -->
+    <style>
+    p {
+        text-decoration: double;
+        color: white;
+        border: 100%;
+        border-color: yellow;
+        border-style: dashed;
+        border-width: 3px;
+        background-color: black;
+    }
+    </style>
+    
+    <!-- Inline CSS -->
+    <body>
+        <h1 style="color: blueviolet; text-align: center;">CSS(Cascading Style Sheet)</h1>
+        <section>
+            <div class="one">
+                <p>CSS (Cascading Style Sheets) is a language used to describe the presentation and layout of web pages. While HTML provides the structure of a webpage, CSS controls how it looks, including colors, fonts, spacing, and overall layout</p>
+            </div>
+        </section>
+        <section>
+            <h2 id="two">This is Box Model</h2>
+        </section>
+        <div class="three"><h2>Class Selector</h2></div>
+    </body>
+    </html>
+    
+```
+    
+### **CSS Code Breakdown (style.css):**
+
+```css
+    /* CSS ID Selector */
+    #two {
+        color: orangered;
+        border-color: turquoise;
+        border-width: 5px;
+        border-style: double;
+    }
+    
+    /* Universal Selector */
+    * {
+        background-color: rgba(242, 163, 123, 0.5);
+    }
+    
+    /* Class Selector */
+    .three {
+        background-color: orange;
+        border-style: dotted;
+        border-color: white;
+        border-width: 2px;
+        margin: 1px 2px 3px 4px;
+        padding-left: 20px;
+    }
+    
+```
+### **Detailed Description:**
+### **HTML:**
+    
+1. **`<head>` Section**: Contains meta-information about the HTML document:
+        - **`<title>`**: Defines the title of the document.
+        - **`<link rel="stylesheet" href="style.css">`**: Links to the external CSS file for additional styles.
+2. **`<style>` Tag (Internal CSS)**:
+        - **`<p>`**: Styles all `<p>` elements with a double underline, white text, a dashed yellow border, and a black background.
+3. **`<body>` Section**:
+        - **`<h1 style="...">`**: Uses inline CSS to set the color of the header to blueviolet and center-aligns it.
+        - **`<section>` and `<div>`**: Contain text and other elements styled by the internal and external CSS.
+    
+### **External CSS (style.css):**
+    
+1. **`#two` (ID Selector)**:
+        - Targets the element with the ID `two` (which is an `<h2>` in the HTML).
+        - Applies an orange-red text color, turquoise border, double border style, and 5px border width.
+2. **`` (Universal Selector)**:
+        - Applies a semi-transparent orange background color to all elements on the page.
+3. **`.three` (Class Selector)**:
+        - Targets elements with the class `three` (a `<div>` in the HTML).
+        - Sets an orange background, white dotted border, 2px border width, and specific margins and padding.
+    
+### **CSS Overview:**
+    
+**CSS (Cascading Style Sheets)** is used to control the presentation of HTML documents. In this code:
+    
+- **External CSS** is linked using `<link rel="stylesheet" href="style.css">`. This is useful for applying consistent styles across multiple pages.
+- **Internal CSS** is included within the `<style>` tag in the HTML `<head>`. This is useful for styles that are specific to the current page.
+- **Inline CSS** is applied directly to HTML elements using the `style` attribute. It is useful for quick, one-off styles but is generally not recommended for maintainability.
+    
+### **Usage in the Code:**
+    
+- **Internal CSS** is used to style the `<p>` element with text decoration, color, and border properties.
+- **Inline CSS** is used to style the `<h1>` element directly.
+- **External CSS** (in `style.css`) is used to define styles for the ID `two`, the universal selector ``, and the class `three`. This separates styles from the HTML structure, making it easier to manage and update.
+    
+This approach demonstrates the flexibility and power of CSS in web design, allowing for various methods of applying styles depending on the needs of the project.
+</details>
