@@ -464,3 +464,221 @@
     
 This approach demonstrates the flexibility and power of CSS in web design, allowing for various methods of applying styles depending on the needs of the project.
 </details>
+
+<details>
+<summary>Assignment 04(CSS)</summary>
+   
+- Flexbox, Display Styling, Box Modeling
+    
+    ### 1. **Flexbox Section**
+    
+    The Flexbox layout is used for creating flexible and responsive layouts. In this section, we have a container (`flex-container`) that holds three items (`flex-item`). Flexbox helps in arranging these items in a row and distributing space between them.
+    
+    ### Code Explanation:
+    
+    ```html
+    <section class="flex-container">
+        <div class="flex-item" id="item1">Item 1</div>
+        <div class="flex-item" id="item2">Item 2</div>
+        <div class="flex-item" id="item3">Item 3</div>
+    </section>
+    
+    ```
+    
+    - **Container (`.flex-container`)**:
+        - `display: flex;`: Activates the flexbox model, making the container a flex container.
+        - `justify-content: space-between;`: Distributes space evenly between the items. The first and last item are aligned to the edges of the container.
+        - `align-items: center;`: Vertically centers the items.
+        - `flex-direction: row;`: Aligns the items horizontally in a row.
+        - `background-color: #c6a8fa;`: Adds a background color to the container.
+        - `height: 100px;`: Sets a fixed height for the container.
+    
+    ### Individual Flex Items:
+    
+    ```css
+    .flex-item {
+        background-color: #FF5722; /* Background color of the item */
+        color: white; /* Text color */
+        text-align: center; /* Centers the text horizontally */
+        padding: 20px; /* Adds space inside the item */
+        border-radius: 10px; /* Rounds the corners */
+        font-size: 20px; /* Font size of the text */
+        flex-grow: 1; /* Allows the item to grow and fill available space */
+        margin: 0 10px; /* Adds space between items */
+        transition: transform 0.3s; /* Smooth hover animation */
+    }
+    
+    ```
+    
+    - **`.flex-item:hover`**: This applies a hover effect, where the item scales up when hovered:
+        
+        ```css
+        .flex-item:hover {
+            transform: scale(1.1);
+        }
+        
+        ```
+        
+    
+    ### Custom Item Styling:
+    
+    Each item can have its own styling using its ID:
+    
+    - **`#item1`**: Light blue background, displays second due to `order: 2`.
+    - **`#item2`**: Green background, displays first due to `order: 1` and shrinks more than others using `flex-shrink: 2`.
+    - **`#item3`**: Pink background, displays third due to `order: 3`.
+    
+    Example for `#item1`:
+    
+    ```css
+    #item1 {
+        background-color: #80d0f6;
+        order: 2;
+    }
+    
+    ```
+    
+    ### 2. **Display Styling Section**
+    
+    This section demonstrates three different CSS display properties: `block`, `inline`, and `inline-block`. Each has a distinct behavior in terms of how they take up space in the layout.
+    
+    ### Code Explanation:
+    
+    ```html
+    <section>
+        <h3 id="block">Block Display</h3>
+        <h3 id="inline">Inline Display</h3>
+        <h3 id="inlineblock">Inline-block Display</h3>
+    </section>
+    
+    ```
+    
+    - **Block Display (`#block`)**:
+        
+        ```css
+        #block {
+            display: block;
+            background-color: rgb(228, 245, 96);
+            width: 150px;
+            margin-bottom: 10px;
+            border: 2px solid green;
+        }
+        
+        ```
+        
+        - **`display: block;`**: A block element takes up the entire width available and starts on a new line.
+        - **Width**: The width is set to 150px.
+        - **Margin & Border**: Adds a bottom margin and green border around the block.
+    - **Inline Display (`#inline`)**:
+        
+        ```css
+        #inline {
+            display: inline;
+            background-color: rgb(137, 226, 212);
+            width: auto;
+            margin-bottom: 10px;
+            border: 2px solid green;
+        }
+        
+        ```
+        
+        - **`display: inline;`**: Inline elements do not start on a new line, and they only take up as much width as necessary (they are in the flow of other elements).
+        - **Width**: `auto` means it takes up as much space as the content requires.
+    - **Inline-Block Display (`#inlineblock`)**:
+        
+        ```css
+        #inlineblock {
+            display: inline-block;
+            background-color: rgb(253, 160, 255);
+            width: auto;
+            margin-bottom: 10px;
+            border: 2px solid green;
+        }
+        
+        ```
+        
+        - **`display: inline-block;`**: Similar to `inline`, but allows for setting width and height.
+        - **Width**: It can have a custom width while still being part of the inline flow.
+    
+    ### 3. **Box Modeling Section**
+    
+    This section demonstrates the CSS Box Model, which consists of content, padding, borders, and margins. Three boxes are styled differently, with variations in their borders and positioning.
+    
+    ### Code Explanation:
+    
+    ```html
+    <section>
+        <div id="box4"><h2>Box Model</h2></div>
+        <div class="box">
+            <div id="box1">Box 1</div>
+            <div id="box2">Box 2</div>
+            <div id="box3">Box 3</div>
+        </div>
+    </section>
+    
+    ```
+    
+    - **Box Container** (`#box4`):
+        
+        ```css
+        #box4 {
+            background-color: rgb(228, 197, 179);
+            height: 180px;
+            width: 350px;
+            text-align: center;
+        }
+        
+        ```
+        
+        This sets the background color and dimensions of the box that contains the three smaller boxes.
+        
+    - **Box Flex Container**:
+        
+        ```css
+        .box {
+            display: flex;
+            text-align: center;
+            margin-left: 15px;
+        }
+        
+        ```
+        
+        - **`display: flex;`**: The container is set to flexbox, arranging the boxes horizontally.
+        - **`text-align: center;`**: Centers the text inside the boxes.
+    - **Individual Box Styling**:
+    Each box has different borders and positioning:
+        
+    ```css
+        #box1 {
+            border: 3px dotted white;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            bottom: 130px;
+            margin-right: 5px;
+        }
+        #box2 {
+            border: 3px solid orange;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            bottom: 130px;
+            margin-right: 5px;
+        }
+        #box3 {
+            border: 3px dashed white;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            bottom: 130px;
+            margin-right: 5px;
+        }
+        
+    ```
+        
+    - **Borders**: Each box has a unique border style (dotted, solid, dashed).
+    - **Positioning**: `position: relative` means the boxes are positioned relative to their normal position, and `bottom: 130px` moves them upwards.
+    - **Margin**: Adds space between the boxes.
+    
+    This section demonstrates how the box model works, showing how padding, borders, and margins are applied to elements, and how positioning can affect layout.
+</details>
